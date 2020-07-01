@@ -4,61 +4,33 @@ aa83988848 薗田光太郎
 
 ## 課題
 
-標本男性の平均と分散を求めよ．また，「適当に選んだ」と言っても所詮聞く相手は周辺の同年代の同じ学部の友達に限定されそうである．周辺に住んでる同年代の工学部の男性の平均と分散を推定せよ．
+標本男性の平均と分散を求めよ．また，「適当に選んだ」と言っても所詮聞く相手は周辺の同年代の同じ学部の友達に限定されそうである．周辺に住んでる同年代の工学部の男性の平均と分散を推定せよ．また，この推定される平均値は標本のとるたびに異なるので確率変数であり，今回推定した平均には誤差がある．その誤差（標準誤差）を求めよ．
    
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
+標準誤差（standard error）は，<img src="/k01/tex/7cf3370ccf734d11f1d835f6a1512a7d.svg?invert_in_darkmode&sanitize=true" align=middle width=37.16830259999999pt height=54.157468200000004pt/>で求めることができる．
 
-extern double ave_online(double val,double ave)
-extern double var_online()
+したがって，今回の課題について，
 
-int main(void)
-{
-    double val;
-    char fname[FILENAME_MAX];
-    char buf[256];
-    FILE* fp;
+|統計量|値|
+|---|---|
+|標本平均|<img src="/k01/tex/24888b4e629550e584c5749d6e257804.svg?invert_in_darkmode&sanitize=true" align=middle width=45.66227159999998pt height=21.18721440000001pt/>|
+|標本分散|<img src="/k01/tex/70fca7b16fd0d8e5da79e199011ede93.svg?invert_in_darkmode&sanitize=true" align=middle width=37.44306224999999pt height=21.18721440000001pt/>|
+|母集団平均|<img src="/k01/tex/ffd02cd2a29ee359d050673905b82aaf.svg?invert_in_darkmode&sanitize=true" align=middle width=94.97731484999998pt height=21.18721440000001pt/>|
+|母集団分散|<img src="/k01/tex/35ae058b877f36e7384685a2e19cb7e4.svg?invert_in_darkmode&sanitize=true" align=middle width=37.44306224999999pt height=21.18721440000001pt/>|
 
-    printf("input the filename of sample:");
-    fgets(fname,sizeof(fname),stdin);
-    fname[strlen(fname)-1] = '\0';
-    printf("the filename of sample: %s\n",fname);
-
-    fp = fopen(fname,"r");
-    if(fp==NULL){
-        fputs("File open error\n",stderr);
-        exit(EXIT_FAILURE);
-    }
-
-    while(fgets(buf,sizeof(buf),fp) != NULL){
-        sscanf(buf,"%lf",&val);
-
-double ave_online(double val, double ave);
- {
-     int a;
-     double b;
-
-     for(i=1,i<=14,i++){
-         b=(i-1)/i*ave +1/i*val;
-     }
-     return b;
- }
- double var_online(double val, double ave);
- {
-     int j;
-     double c;
-
-     for(j=1,j<=14,j++){
-         c=j-(1/j)*ave_online(val*val,ave)+(1/j)*val*val-aveonline(val,ave)*aveonline(val,ave)
-     }
-     return c;
-
- }
 ## ソースコードの説明
 
 あいうえお
+
+## 入出力結果
+
+```
+input the filename of sample:../sample/heights_male.csv
+the filename of sample: ../sample/heights_male.csv
+sample mean：
+sample variance：
+population mean (estimated)：
+population variance (estimated)：
+```
 
 ## 修正履歴
 
