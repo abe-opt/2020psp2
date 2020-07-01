@@ -18,18 +18,20 @@ aa83988848 薗田光太郎
 |母集団分散|<img src="/k01/tex/35ae058b877f36e7384685a2e19cb7e4.svg?invert_in_darkmode&sanitize=true" align=middle width=37.44306224999999pt height=21.18721440000001pt/>|
 
 ## ソースコードの説明
+36行目　二乗の平均を求める
+66行目　平均を求める関数
+73行目　分散を求める関数
 
-あいうえお
 
 ## 入出力結果
 
 ```
 input the filename of sample:../sample/heights_male.csv
 the filename of sample: ../sample/heights_male.csv
-sample mean：
-sample variance：
-population mean (estimated)：
-population variance (estimated)：
+sample mean:173.89
+sample variance:25.36
+population mean (estimated):173.89
+population variance (estimated):28.98
 ```
 
 ## 修正履歴
