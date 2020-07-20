@@ -36,4 +36,5 @@ population variance (estimated):28.98
 
 ## 修正履歴
 
-説明は「かきくけこ」だ！
+[comment #20200702 moto]
+- OKです。
