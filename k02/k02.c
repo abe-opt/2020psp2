@@ -3,11 +3,16 @@
 #include <string.h>
 #include <math.h>
 
+#define ave_A 170.8
+#define ave_B 169.7
+#define var_A 5.43
+#define var_B 5.5
+
 extern double p_stdnorm(double z);
 
 int main(void)
 {
-    double val;
+    double val, z_A, z_B;
     char fname[FILENAME_MAX];
     char buf[256];
     FILE* fp;
@@ -26,6 +31,10 @@ int main(void)
 
     while(fgets(buf,sizeof(buf),fp) != NULL){
         sscanf(buf,"%lf",&val);
+        z_A = (val - ave_A) / var_A;
+        z_B = (val - ave_B) / var_B;
+        L1 *= p_stdnorm(z_A);
+        L2 *= p_stdnorm(z_B);
 
 
     
@@ -39,8 +48,9 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    printf("L_A: %f\n",max_val);
-    printf("L_B: %f\n",min_val);
+
+    printf("likelyhood for A: %f\n", L1);
+    printf("likelyhood for B: %f\n", L2);
 
     return 0;
 
