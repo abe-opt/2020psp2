@@ -31,3 +31,5 @@ Likelihood for B：0.000002
 
 ## 修正履歴
 
+[comment #20200721 moto]
+- OKです。
