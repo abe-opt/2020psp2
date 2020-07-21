@@ -38,3 +38,6 @@ population variance (estimated):28.98
 
 [comment #20200702 moto]
 - OKです。
+
+[comment #20200720 sonoda]
+- 課題1の完了を確認しました
