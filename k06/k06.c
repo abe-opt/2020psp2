@@ -6,8 +6,7 @@
 extern void get_bound(int num_male, int num_whole, double* lower_bound, double* upper_bound);
 extern int choose(int n, int r);
 
-int main(void)
-{
+int main(void){
     double val;
     char fname[FILENAME_MAX];
     char buf[256];
