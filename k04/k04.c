@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define NUM 14
 
 struct FILE_DATA
 {
@@ -63,7 +64,7 @@ int main(void)
     printf("Which ID's data do you want? :");
     scanf("%lf", &search);
 
-    for(j = 1; j < 15; j++)
+    for(j = 1; j < NUM+1; j++)
     {
         if(data[j].ID == search)
         {
@@ -87,7 +88,7 @@ int main(void)
         }
     }
 
-    if(nodata == 14)
+    if(nodata == NUM)
     {
         printf("No data");
     }
