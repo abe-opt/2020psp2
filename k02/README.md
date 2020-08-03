@@ -33,3 +33,6 @@ Likelihood for B：0.000002
 
 [comment #20200721 moto]
 - OKです。
+
+[comment #20200731 sonoda]
+- 課題2の完了を確認しました
