@@ -15,7 +15,7 @@ l.50~62 身長,　性別, IDのデータを　heights, gender, IDに代入
 l.64 IDの入力
 l.72~79 性別の判定
 l.66~88 IDがあれば、性別を判定し身長、性別、IDを表示。なければ、nodataをカウントする。
-l.90~93 nodataが14に達したときNo daata と表示
+l.90~93 nodataが14に達したときNo data と表示
 
 ## 入出力結果
 
