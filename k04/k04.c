@@ -3,6 +3,7 @@
 #include <string.h>
 #define NUM 14
 
+
 struct FILE_DATA
 {
     int gender;
